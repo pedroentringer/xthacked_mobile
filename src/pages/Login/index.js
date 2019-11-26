@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {StatusBar} from 'react-native';
+import {StatusBar, Alert} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 
 import {Types as UserTypes} from '../../store/user/actions';
+import api from '../../services/api';
 
 import {
   Container,
@@ -26,11 +27,17 @@ const Login = ({navigation}) => {
 
   const handleLogin = async () => {
     try {
-      const newUser = {
-        name: 'Pedro',
-      };
-      dispatch({type: UserTypes.ADD, newUser});
-    } catch (err) {}
+      console.tron.log('buscando user /users?email=${email}');
+      const {data} = await api.get(`/users?email=${email}`);
+      dispatch({type: UserTypes.ADD, data});
+    } catch (err) {
+      Alert.alert(
+        'Erro ao Entrar',
+        'Algo deu errado ao fazer o login, tente novamente.',
+        [{text: 'Entendi'}],
+        {cancelable: false},
+      );
+    }
   };
 
   return (
@@ -60,7 +67,7 @@ const Login = ({navigation}) => {
               <ButtonText>Entrar</ButtonText>
             </Button>
           </Section>
-          <Description>XTHACKED</Description>
+          <Description>XTHACKED - {user.name}</Description>
         </Container>
       </Content>
     </>

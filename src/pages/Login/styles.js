@@ -51,6 +51,7 @@ export const InputArea = styled.KeyboardAvoidingView`
 export const Input = styled.TextInput`
   color: #ffffff;
   text-align: center;
+  font-size: 16px;
 `;
 
 export const Button = styled.TouchableOpacity.attrs({
@@ -66,6 +67,6 @@ export const Button = styled.TouchableOpacity.attrs({
 `;
 
 export const ButtonText = styled.Text`
-  font-size: 12px;
+  font-size: 16px;
   color: #ffffff;
 `;
