@@ -17,9 +17,7 @@ import {
   ButtonText,
 } from './styles';
 
-import {SvgXml} from 'react-native-svg';
 import logomarca from '../../assets/logomarca.png';
-import {url} from 'inspector';
 
 const Login = ({navigation}) => {
   const dispatch = useDispatch();
