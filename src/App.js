@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import createRouter from './routes/index';
 
 export default function App() {
-  const logged = useSelector(state => (state.user ? true : false));
+  const logged = useSelector(state => (state.user.id ? true : false));
   const Routes = createRouter(logged);
   return <Routes />;
 }

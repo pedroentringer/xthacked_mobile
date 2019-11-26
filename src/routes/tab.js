@@ -66,7 +66,6 @@ const tab = createBottomTabNavigator(
         },
       }),
     },
-
     Profile: {
       screen: Profile,
       navigationOptions: props => ({
@@ -99,7 +98,10 @@ const tab = createBottomTabNavigator(
       }),
     },
   },
-  {initialRouteName: 'Home', resetOnBlur: true},
+  {
+    initialRouteName: 'Home',
+    resetOnBlur: true,
+  },
 );
 
 export default tab;
