@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {StatusBar} from 'react-native';
 //import {useSelector, useDispatch} from 'react-redux';
 
-import api from '../../services/api';
+//import api from '../../services/api';
 
 import {Types as UserTypes} from '../../store/user/actions';
 

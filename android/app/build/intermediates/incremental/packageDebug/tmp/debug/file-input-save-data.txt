@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Nov 26 14:04:58 BRST 2019
+#Tue Nov 26 14:39:38 BRST 2019
 56.path=lib/x86/libjsinspector.so
 5.base=D\:\\RSXP Rocketseat\\hack\\xthacked_mobile\\android\\app\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
 42.base=D\:\\RSXP Rocketseat\\hack\\xthacked_mobile\\android\\app\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
