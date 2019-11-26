@@ -1,44 +1,23 @@
-import React, {useState} from 'react';
-import {StatusBar} from 'react-native';
-import {useSelector, useDispatch} from 'react-redux';
+import React from 'react';
+import {Container, Content, Logo, VideoList} from './styles';
 
-import {Types as UserTypes} from '../../store/user/actions';
-
-import {Container, Content, Logo} from './styles';
-
+import Item from '../../components/Item';
 import logomarca from '../../assets/logomarca.png';
 
 const Home = ({navigation}) => {
-  const dispatch = useDispatch();
-  const user = useSelector(state => state.user);
-  const [cod, setCod] = useState('');
-
-  const handleLogin = async () => {
-    try {
-      const user = {
-        name: 'Pedro',
-      };
-      dispatch({type: UserTypes.ADD, user});
-      setCod('asd');
-    } catch (err) {
-      console.tron.log(err.message);
-    }
-  };
-
   return (
-    <>
-      <StatusBar
-        backgroundColor="transparent"
-        translucent
-        barStyle="dark-content"
-      />
-
-      <Content colors={['#24a8df', '#02528e']}>
-        <Container>
-          <Logo source={logomarca} />
-        </Container>
-      </Content>
-    </>
+    <Content colors={['#24a8df', '#02528e']}>
+      <Container>
+        <Logo source={logomarca} />
+        <VideoList
+          data={['1', '2']}
+          horizontal={false}
+          bounces={false}
+          renderItem={({item, index}) => <Item item={item} />}
+          keyExtractor={(item, index) => index.toString()}
+        />
+      </Container>
+    </Content>
   );
 };
 

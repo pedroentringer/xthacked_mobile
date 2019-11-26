@@ -1,0 +1,6 @@
+module Pods_xthacked {
+  umbrella header "Pods-xthacked-umbrella.h"
+
+  export *
+  module * { export * }
+}
