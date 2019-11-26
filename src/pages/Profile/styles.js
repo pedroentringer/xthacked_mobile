@@ -7,7 +7,7 @@ export const Container = styled.SafeAreaView`
 
 export const Content = styled(LinearGradient)`
   flex: 1;
-  padding: 40px;
+  padding: 30px;
   align-items: center;
   justify-content: space-between;
 `;

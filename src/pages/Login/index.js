@@ -23,15 +23,14 @@ import logomarca from '../../assets/logomarca-branca.png';
 
 const Login = ({navigation}) => {
   const dispatch = useDispatch();
-  const user = useSelector(state => state.user);
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
     try {
       setLoading(true);
-      console.tron.log('buscando user /users?email=${email}');
       const {data} = await api.get(`/users?email=${email}`);
+      setLoading(false);
       dispatch({type: UserTypes.ADD, data});
     } catch (err) {
       setLoading(false);
@@ -72,7 +71,7 @@ const Login = ({navigation}) => {
               <ButtonText>Entrar</ButtonText>
             </Button>
           </Section>
-          <Description>XTHACKED - {user.name}</Description>
+          <Description>XTHACKED</Description>
         </Container>
       </Content>
     </>

@@ -55,11 +55,11 @@ export const Input = styled.TextInput`
 `;
 
 export const Button = styled.TouchableOpacity.attrs({
-  activeOpacity: 0.9,
+  activeOpacity: 0.8,
 })`
   align-self: stretch;
   padding: 16px;
-  border-radius: 4px;
+  border-radius: 200px;
   align-items: center;
   justify-content: center;
   margin-top: 10px;

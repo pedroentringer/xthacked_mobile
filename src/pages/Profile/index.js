@@ -6,23 +6,14 @@ import {Types as UserTypes} from '../../store/user/actions';
 
 import {Container, Content, Logo} from './styles';
 
-import logomarca from '../../assets/logomarca.png';
+import logomarca from '../../assets/logomarca-branca-mini.png';
 
 const Profile = ({navigation}) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user);
-  const [cod, setCod] = useState('');
 
-  const handleLogin = async () => {
-    try {
-      const user = {
-        name: 'Pedro',
-      };
-      dispatch({type: UserTypes.ADD, user});
-      setCod('asd');
-    } catch (err) {
-      console.tron.log(err.message);
-    }
+  const handleLogout = async () => {
+    dispatch({type: UserTypes.REMOVE});
   };
 
   return (
