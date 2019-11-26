@@ -1,24 +1,18 @@
 import {createStackNavigator} from 'react-navigation-stack';
 
-import Login from '../pages/Login';
+import Viewer from '../pages/Viewer';
 
 const stack = createStackNavigator(
   {
-    Menu: {
-      screen: Login,
-      navigationOptions: () => ({
-        header: null,
-      }),
-    },
-    Lists: {
-      screen: Login,
-      navigationOptions: () => ({
-        title: 'Listas de Entregas',
+    Viewer: {
+      screen: Viewer,
+      navigationOptions: ({title}) => ({
+        title: title,
       }),
     },
   },
   {
-    initialRouteName: 'Menu',
+    initialRouteName: 'Viewer',
   },
 );
 
