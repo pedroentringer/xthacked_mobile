@@ -18,19 +18,23 @@ import {
   ButtonText,
 } from './styles';
 
+import Loading from '../../components/Loading';
 import logomarca from '../../assets/logomarca-branca.png';
 
 const Login = ({navigation}) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user);
   const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
     try {
+      setLoading(true);
       console.tron.log('buscando user /users?email=${email}');
       const {data} = await api.get(`/users?email=${email}`);
       dispatch({type: UserTypes.ADD, data});
     } catch (err) {
+      setLoading(false);
       Alert.alert(
         'Erro ao Entrar',
         'Algo deu errado ao fazer o login, tente novamente.',
@@ -42,6 +46,7 @@ const Login = ({navigation}) => {
 
   return (
     <>
+      {loading && <Loading />}
       <StatusBar
         backgroundColor="transparent"
         translucent
