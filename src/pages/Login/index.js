@@ -17,6 +17,9 @@ import {
   ButtonText,
 } from './styles';
 
+import {SvgUri} from 'react-native-svg';
+import logomarca from '../../assets/logo-cor.svg';
+
 const Login = ({navigation}) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user);
@@ -45,6 +48,7 @@ const Login = ({navigation}) => {
         <Content>
           <>
             <Logo>
+              <SvgUri width="100%" height="100%" xml={logomarca} />
               <Title>
                 Titulo - {cod} - {user.name}
               </Title>
