@@ -17,8 +17,9 @@ import {
   ButtonText,
 } from './styles';
 
-import {SvgUri} from 'react-native-svg';
-import logomarca from '../../assets/logo-cor.svg';
+import {SvgXml} from 'react-native-svg';
+import logomarca from '../../assets/logomarca.png';
+import {url} from 'inspector';
 
 const Login = ({navigation}) => {
   const dispatch = useDispatch();
@@ -47,13 +48,7 @@ const Login = ({navigation}) => {
       <Container>
         <Content>
           <>
-            <Logo>
-              <SvgUri width="100%" height="100%" xml={logomarca} />
-              <Title>
-                Titulo - {cod} - {user.name}
-              </Title>
-              <Description>Acesse sua conta</Description>
-            </Logo>
+            <Logo source={{uri: logomarca}} />
             <Section>
               <InputArea>
                 <Input
