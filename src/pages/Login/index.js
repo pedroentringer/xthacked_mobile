@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {StatusBar} from 'react-native';
-import {useSelector, useDispatch} from 'react-redux';
+//import {useSelector, useDispatch} from 'react-redux';
 
 import api from '../../services/api';
 
@@ -19,17 +19,14 @@ import {
   ButtonText,
 } from './styles';
 
-const dispatch = useDispatch();
-const user = useSelector(state => state.user);
+// const dispatch = useDispatch();
+// const user = useSelector(state => state.user);
 
 const Login = ({navigation}) => {
   const [cod, setCod] = useState('');
 
   const handleLogin = async () => {
     try {
-      const response = await api.get(`login/${cod}`);
-      const {dados} = response.data;
-      dispatch({type: UserTypes.ADD(), payload: dados});
     } catch (err) {
       console.tron.log(err.message);
     }
