@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
+  background-color: #000;
 `;
 
 export const Content = styled.View`
@@ -18,10 +19,9 @@ export const Section = styled.View`
   flex: 1;
 `;
 
-export const Logo = styled.View`
+export const Logo = styled.Image`
   align-items: center;
   justify-content: center;
-  padding: 50px 0px 0px 0px;
 `;
 
 export const Title = styled.Text`
