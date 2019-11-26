@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import {StatusBar} from 'react-native';
-//import {useSelector, useDispatch} from 'react-redux';
-
-//import api from '../../services/api';
+import {useSelector, useDispatch} from 'react-redux';
 
 import {Types as UserTypes} from '../../store/user/actions';
 
@@ -19,14 +17,18 @@ import {
   ButtonText,
 } from './styles';
 
-// const dispatch = useDispatch();
-// const user = useSelector(state => state.user);
-
 const Login = ({navigation}) => {
+  const dispatch = useDispatch();
+  const user = useSelector(state => state.user);
   const [cod, setCod] = useState('');
 
   const handleLogin = async () => {
     try {
+      const user = {
+        name: 'Pedro',
+      };
+      dispatch({type: UserTypes.ADD, user});
+      setCod('asd');
     } catch (err) {
       console.tron.log(err.message);
     }
@@ -43,7 +45,9 @@ const Login = ({navigation}) => {
         <Content>
           <>
             <Logo>
-              <Title>iConex Entrega</Title>
+              <Title>
+                Titulo - {cod} - {user.name}
+              </Title>
               <Description>Acesse sua conta</Description>
             </Logo>
             <Section>
@@ -61,7 +65,7 @@ const Login = ({navigation}) => {
                 <ButtonText>Entrar</ButtonText>
               </Button>
             </Section>
-            <Description>www.iconexlog.com.br</Description>
+            <Description>XTHACKED</Description>
           </>
         </Content>
       </Container>

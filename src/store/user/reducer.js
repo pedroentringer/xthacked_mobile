@@ -1,14 +1,11 @@
 import {Types} from './actions';
 
-const INITIAL_STATE = [];
+const INITIAL_STATE = {};
 
 export default function user(state = INITIAL_STATE, action) {
   switch (action.type) {
     case Types.ADD:
-      return {
-        ...state,
-        user: action.payload.user,
-      };
+      return action.user;
     case Types.REMOVE:
       return {
         ...state,
