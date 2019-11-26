@@ -31,7 +31,6 @@ export const Title = styled.Text`
 `;
 
 export const Description = styled.Text`
-  font-family: 'Montserrat-Regular';
   font-size: 12px;
   color: #ffffff;
 `;
@@ -62,7 +61,6 @@ export const Button = styled.TouchableOpacity.attrs({
 `;
 
 export const ButtonText = styled.Text`
-  font-family: 'Montserrat-Bold';
   font-size: 12px;
   color: #3d77f8;
 `;

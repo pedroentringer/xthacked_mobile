@@ -9,7 +9,6 @@ import {
   Content,
   Section,
   Logo,
-  Title,
   Description,
   InputArea,
   Input,
@@ -19,12 +18,12 @@ import {
 
 import logomarca from '../../assets/logomarca.png';
 
-import BackGroundC from '../../components/BackGroundC';
+import Alert from '../../components/Alert';
 
 const Login = ({navigation}) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user);
-  const [cod, setCod] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleLogin = async () => {
     try {
@@ -32,7 +31,7 @@ const Login = ({navigation}) => {
         name: 'Pedro',
       };
       dispatch({type: UserTypes.ADD, user});
-      setCod('asd');
+      setEmail('asd');
     } catch (err) {
       console.tron.log(err.message);
     }
@@ -45,18 +44,17 @@ const Login = ({navigation}) => {
         translucent
         barStyle="dark-content"
       />
-      <BackGroundC />
-      <Container>
-        <Content colors={['#24a8df', '#02528e']}>
+      <Content colors={['#24a8df', '#02528e']}>
+        <Container>
           <Logo source={logomarca} />
           <Section>
             <InputArea>
               <Input
-                placeholder="Código de Acesso"
+                placeholder="E-mail"
                 placeholderTextColor="#ffffff"
-                keyboardType="number-pad"
-                value={cod}
-                onChangeText={setCod}
+                keyboardType="email"
+                value={email}
+                onChangeText={setEmail}
                 onSubmitEditing={handleLogin}
               />
             </InputArea>
@@ -65,8 +63,8 @@ const Login = ({navigation}) => {
             </Button>
           </Section>
           <Description>XTHACKED</Description>
-        </Content>
-      </Container>
+        </Container>
+      </Content>
     </>
   );
 };
