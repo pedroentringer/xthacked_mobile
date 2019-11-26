@@ -20,10 +20,7 @@ export default function user(state = INITIAL_STATE, action) {
     case Types.ADD:
       return action.user;
     case Types.REMOVE:
-      return {
-        ...state,
-        user: null,
-      };
+      return {};
     default:
       return state;
   }

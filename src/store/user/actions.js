@@ -11,5 +11,5 @@ export const addUser = user => ({
 });
 
 export const removeUser = () => ({
-  type: Types.ADD,
+  type: Types.REMOVE,
 });
