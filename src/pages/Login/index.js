@@ -19,6 +19,8 @@ import {
 
 import logomarca from '../../assets/logomarca.png';
 
+import BackGroundC from '../../components/BackGroundC';
+
 const Login = ({navigation}) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user);
@@ -43,27 +45,26 @@ const Login = ({navigation}) => {
         translucent
         barStyle="dark-content"
       />
+      <BackGroundC />
       <Container>
-        <Content>
-          <>
-            <Logo source={{uri: logomarca}} />
-            <Section>
-              <InputArea>
-                <Input
-                  placeholder="Código de Acesso"
-                  placeholderTextColor="#ffffff"
-                  keyboardType="number-pad"
-                  value={cod}
-                  onChangeText={setCod}
-                  onSubmitEditing={handleLogin}
-                />
-              </InputArea>
-              <Button onPress={handleLogin}>
-                <ButtonText>Entrar</ButtonText>
-              </Button>
-            </Section>
-            <Description>XTHACKED</Description>
-          </>
+        <Content colors={['#24a8df', '#02528e']}>
+          <Logo source={logomarca} />
+          <Section>
+            <InputArea>
+              <Input
+                placeholder="Código de Acesso"
+                placeholderTextColor="#ffffff"
+                keyboardType="number-pad"
+                value={cod}
+                onChangeText={setCod}
+                onSubmitEditing={handleLogin}
+              />
+            </InputArea>
+            <Button onPress={handleLogin}>
+              <ButtonText>Entrar</ButtonText>
+            </Button>
+          </Section>
+          <Description>XTHACKED</Description>
         </Content>
       </Container>
     </>
