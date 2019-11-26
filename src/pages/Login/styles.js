@@ -26,7 +26,6 @@ export const Logo = styled.Image`
 `;
 
 export const Title = styled.Text`
-  font-family: 'Montserrat-Regular';
   font-size: 20px;
   color: #ffffff;
 `;
