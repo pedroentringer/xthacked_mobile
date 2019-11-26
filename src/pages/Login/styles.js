@@ -3,14 +3,13 @@ import LinearGradient from 'react-native-linear-gradient';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  background-color: #fafafa;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
 `;
 
 export const Content = styled(LinearGradient)`
   flex: 1;
-  padding: 40px;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 export const Section = styled.View`
@@ -18,8 +17,14 @@ export const Section = styled.View`
   align-items: center;
   justify-content: center;
   flex: 1;
+  padding: 100px 0;
 `;
 
+export const LogoContent = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`;
 export const Logo = styled.Image`
   align-items: center;
   justify-content: center;
@@ -46,21 +51,27 @@ export const InputArea = styled.KeyboardAvoidingView`
 export const Input = styled.TextInput`
   color: #ffffff;
   text-align: center;
+  font-size: 16px;
 `;
 
 export const Button = styled.TouchableOpacity.attrs({
   activeOpacity: 0.9,
 })`
   align-self: stretch;
-  padding: 20px;
-  border-radius: 200px;
-  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 4px;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  border: 1px solid #ffffff;
 `;
 
 export const ButtonText = styled.Text`
+<<<<<<< HEAD
   font-size: 12px;
   color: #3d77f8;
+=======
+  font-size: 16px;
+  color: #ffffff;
+>>>>>>> 2e57677ad0c0c6a4f35b586028f14e4865eb67ed
 `;

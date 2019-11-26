@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
-import {StatusBar} from 'react-native';
+import {StatusBar, Alert} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 
 import {Types as UserTypes} from '../../store/user/actions';
+import api from '../../services/api';
 
 import {
   Container,
   Content,
   Section,
+  LogoContent,
   Logo,
-  Title,
   Description,
   InputArea,
   Input,
@@ -17,46 +18,53 @@ import {
   ButtonText,
 } from './styles';
 
-import logomarca from '../../assets/logomarca.png';
-
-import BackGroundC from '../../components/BackGroundC';
+import Loading from '../../components/Loading';
+import logomarca from '../../assets/logomarca-branca.png';
 
 const Login = ({navigation}) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user);
-  const [cod, setCod] = useState('');
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
     try {
-      const user = {
-        name: 'Pedro',
-      };
-      dispatch({type: UserTypes.ADD, user});
-      setCod('asd');
+      setLoading(true);
+      console.tron.log('buscando user /users?email=${email}');
+      const {data} = await api.get(`/users?email=${email}`);
+      dispatch({type: UserTypes.ADD, data});
     } catch (err) {
-      console.tron.log(err.message);
+      setLoading(false);
+      Alert.alert(
+        'Erro ao Entrar',
+        'Algo deu errado ao fazer o login, tente novamente.',
+        [{text: 'Entendi'}],
+        {cancelable: false},
+      );
     }
   };
 
   return (
     <>
+      {loading && <Loading />}
       <StatusBar
         backgroundColor="transparent"
         translucent
         barStyle="dark-content"
       />
-      <BackGroundC />
-      <Container>
-        <Content colors={['#24a8df', '#02528e']}>
-          <Logo source={logomarca} />
+      <Content colors={['#24a8df', '#02528e']}>
+        <Container>
+          <LogoContent>
+            <Logo source={logomarca} />
+          </LogoContent>
           <Section>
             <InputArea>
               <Input
-                placeholder="Código de Acesso"
+                placeholder="E-mail"
                 placeholderTextColor="#ffffff"
-                keyboardType="number-pad"
-                value={cod}
-                onChangeText={setCod}
+                keyboardType="email-address"
+                value={email}
+                onChangeText={setEmail}
                 onSubmitEditing={handleLogin}
               />
             </InputArea>
@@ -64,9 +72,9 @@ const Login = ({navigation}) => {
               <ButtonText>Entrar</ButtonText>
             </Button>
           </Section>
-          <Description>XTHACKED</Description>
-        </Content>
-      </Container>
+          <Description>XTHACKED - {user.name}</Description>
+        </Container>
+      </Content>
     </>
   );
 };
