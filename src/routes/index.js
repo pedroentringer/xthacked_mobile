@@ -5,7 +5,7 @@ import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
 
 import {Transition} from 'react-native-reanimated';
 
-import Login from './pages/Login/';
+import Login from '../pages/Login';
 
 import stack from './stack';
 
