@@ -8,6 +8,7 @@ import {
   Container,
   Content,
   Section,
+  LogoContent,
   Logo,
   Description,
   InputArea,
@@ -16,9 +17,7 @@ import {
   ButtonText,
 } from './styles';
 
-import logomarca from '../../assets/logomarca.png';
-
-import Alert from '../../components/Alert';
+import logomarca from '../../assets/logomarca-branca.png';
 
 const Login = ({navigation}) => {
   const dispatch = useDispatch();
@@ -27,14 +26,11 @@ const Login = ({navigation}) => {
 
   const handleLogin = async () => {
     try {
-      const user = {
+      const newUser = {
         name: 'Pedro',
       };
-      dispatch({type: UserTypes.ADD, user});
-      setEmail('asd');
-    } catch (err) {
-      console.tron.log(err.message);
-    }
+      dispatch({type: UserTypes.ADD, newUser});
+    } catch (err) {}
   };
 
   return (
@@ -46,13 +42,15 @@ const Login = ({navigation}) => {
       />
       <Content colors={['#24a8df', '#02528e']}>
         <Container>
-          <Logo source={logomarca} />
+          <LogoContent>
+            <Logo source={logomarca} />
+          </LogoContent>
           <Section>
             <InputArea>
               <Input
                 placeholder="E-mail"
                 placeholderTextColor="#ffffff"
-                keyboardType="email"
+                keyboardType="email-address"
                 value={email}
                 onChangeText={setEmail}
                 onSubmitEditing={handleLogin}
