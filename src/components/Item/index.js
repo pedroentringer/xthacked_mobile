@@ -14,10 +14,13 @@ import {
   ButtonText,
 } from './styles';
 
-export default function List({post}) {
+export default function List({navigation, post}) {
+  const handleVideo = () => {
+    navigation.navigate('Viewer', post);
+  };
   return (
     <Container>
-      <BoxVideo />
+      <BoxVideo onPress={handleVideo} />
       <Main>
         <AvatarContent>
           <Avatar />

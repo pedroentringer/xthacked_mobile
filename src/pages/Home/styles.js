@@ -21,8 +21,29 @@ export const Logo = styled.Image`
   justify-content: center;
 `;
 
+export const Filters = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const Filter = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.8,
+})`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 200px;
+  margin: 20px 10px;
+`;
+
+export const FilterText = styled.Text`
+  font-size: 12px;
+  margin-left: 8px;
+`;
+
 export const VideoList = styled(FlatList)`
   align-self: stretch;
   flex: 1;
-  margin-top: 40px;
 `;

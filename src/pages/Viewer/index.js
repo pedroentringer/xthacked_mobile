@@ -34,6 +34,11 @@ const Profile = ({navigation}) => {
 
   return (
     <>
+      <StatusBar
+        backgroundColor="#fafafa"
+        translucent={false}
+        barStyle="dark-content"
+      />
       <Content colors={['#24a8df', '#02528e']}>
         <Container>
           <Logo source={logomarca} />

@@ -32,7 +32,7 @@ const INITIAL_STATE = [
 
 export default function post(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case Types.ADD:
+    case Types.ADD_POST:
       let insert = true;
       state.map(post => {
         if (post.id == action.post.id) {
@@ -40,6 +40,8 @@ export default function post(state = INITIAL_STATE, action) {
         }
       });
       return insert ? [...state, action.payload.post] : state;
+    case Types.ADD_POSTS:
+      return action.posts;
     default:
       return state;
   }

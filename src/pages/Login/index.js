@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {StatusBar, Alert} from 'react-native';
-import {useSelector, useDispatch} from 'react-redux';
+import {Alert} from 'react-native';
+import {useDispatch} from 'react-redux';
 
 import {Types as UserTypes} from '../../store/user/actions';
 import api from '../../services/api';
