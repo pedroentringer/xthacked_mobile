@@ -16,10 +16,15 @@ export const Container = styled.View`
 
 export const Card = styled.View`
   background-color: #fff;
-  padding: 10px;
   border-radius: 6px;
   elevation: 2;
-  padding: 5px;
   justify-content: center;
   align-items: center;
+  padding: 8px;
+`;
+
+export const Text = styled.Text`
+  color: #3b3b3b;
+  font-size: 15px;
+  font-weight: bold;
 `;

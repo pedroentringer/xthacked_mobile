@@ -504,6 +504,10 @@
         "source": "C:\\Users\\pedro\\.gradle\\caches\\transforms-2\\files-2.1\\1775170858826612aef12d31cc3e08ec\\res\\drawable\\abc_vector_test.xml"
     },
     {
+        "merged": "D:\\RSXP Rocketseat\\hack\\xthacked_mobile\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item.xml.flat",
+        "source": "D:\\RSXP Rocketseat\\hack\\xthacked_mobile\\node_modules\\react-native-image-picker\\android\\build\\intermediates\\packaged_res\\debug\\layout\\list_item.xml"
+    },
+    {
         "merged": "D:\\RSXP Rocketseat\\hack\\xthacked_mobile\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_edittext.xml.flat",
         "source": "C:\\Users\\pedro\\.gradle\\caches\\transforms-2\\files-2.1\\0e9164e4d9e060a02171d646aaeb8911\\res\\color\\abc_tint_edittext.xml"
     },
@@ -1570,6 +1574,10 @@
     {
         "merged": "D:\\RSXP Rocketseat\\hack\\xthacked_mobile\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\pedro\\.gradle\\caches\\transforms-2\\files-2.1\\0e9164e4d9e060a02171d646aaeb8911\\res\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "D:\\RSXP Rocketseat\\hack\\xthacked_mobile\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
+        "source": "D:\\RSXP Rocketseat\\hack\\xthacked_mobile\\node_modules\\react-native-image-picker\\android\\build\\intermediates\\packaged_res\\debug\\xml\\provider_paths.xml"
     },
     {
         "merged": "D:\\RSXP Rocketseat\\hack\\xthacked_mobile\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",

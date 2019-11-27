@@ -11,8 +11,13 @@ export const Content = styled(LinearGradient)`
   flex: 1;
   align-self: stretch;
   align-items: center;
-  padding: 30px;
+
   justify-content: space-between;
+`;
+
+export const Scroll = styled.ScrollView`
+  flex: 1;
+  padding: 30px;
 `;
 
 export const Logo = styled.Image`

@@ -18,7 +18,7 @@ import Loading from '../../components/Loading';
 import logomarca from '../../assets/logomarca-branca-mini.png';
 
 const Home = ({navigation}) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState('course');
   const posts = useSelector(state => state.post);
   const dispatch = useDispatch();
