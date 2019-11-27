@@ -47,6 +47,10 @@ export default function List({post}) {
             />
             <ButtonText style={{color: '#D52424'}}>3.230</ButtonText>
           </Button>
+          <Button>
+            <FontAwesome5 name={'comments'} size={20} color={'#C8C8C8'} solid />
+            <ButtonText style={{color: '#C8C8C8'}}>3.230</ButtonText>
+          </Button>
         </Buttons>
       </Main>
     </Container>
