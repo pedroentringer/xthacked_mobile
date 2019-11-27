@@ -2,6 +2,7 @@ import {Types} from './actions';
 
 const INITIAL_STATE = [
   {
+    id: 1,
     title: 'Ligações Automáticas',
     user: {
       name: 'Pedro Entringer',
@@ -10,6 +11,7 @@ const INITIAL_STATE = [
     dislikes: 20,
   },
   {
+    id: 2,
     title: 'Ligações Automáticas',
     user: {
       name: 'Pedro Entringer',
@@ -18,6 +20,7 @@ const INITIAL_STATE = [
     dislikes: 20,
   },
   {
+    id: 3,
     title: 'Ligações Automáticas',
     user: {
       name: 'Pedro Entringer',
