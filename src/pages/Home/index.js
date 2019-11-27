@@ -81,6 +81,10 @@ const Home = ({navigation}) => {
               )}
               <FilterText>Dúvidas</FilterText>
             </Filter>
+            <Filter onPress={() => navigation.navigate('Submit')}>
+              <AntDesign name={'plus'} size={20} color={'#C8C8C8'} solid />
+              <FilterText>Enviar</FilterText>
+            </Filter>
           </Filters>
           {posts.length == 0 ? (
             <Filter>

@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 import Home from '../pages/Home';
+import Ranking from '../pages/Ranking';
 import Info from '../pages/Info';
 import Profile from '../pages/Profile';
 
@@ -58,6 +59,35 @@ const tab = createBottomTabNavigator(
             return (
               <FontAwesome5
                 name={'home'}
+                size={20}
+                color={'rgba(0, 0, 0, 0.26)'}
+              />
+            );
+          }
+        },
+      }),
+    },
+    Ranking: {
+      screen: Ranking,
+      navigationOptions: props => ({
+        tabBarOptions: {
+          activeTintColor: 'rgba(2, 82, 142, 1)',
+          inactiveTintColor: 'rgba(0, 0, 0, 0.26)',
+          gesturesEnabled: false,
+        },
+        tabBarIcon: ({focused}) => {
+          if (focused) {
+            return (
+              <FontAwesome5
+                name={'trophy'}
+                size={20}
+                color={'rgba(2, 82, 142, 1)'}
+              />
+            );
+          } else {
+            return (
+              <FontAwesome5
+                name={'trophy'}
                 size={20}
                 color={'rgba(0, 0, 0, 0.26)'}
               />

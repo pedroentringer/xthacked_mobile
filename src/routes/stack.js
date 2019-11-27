@@ -1,6 +1,7 @@
 import {createStackNavigator} from 'react-navigation-stack';
 
 import Viewer from '../pages/Viewer';
+import Submit from '../pages/Submit';
 import tab from './tab';
 
 const stack = createStackNavigator(
@@ -15,6 +16,12 @@ const stack = createStackNavigator(
       screen: Viewer,
       navigationOptions: ({navigation}) => ({
         title: navigation.state.params.post.title,
+      }),
+    },
+    Submit: {
+      screen: Submit,
+      navigationOptions: ({navigation}) => ({
+        title: 'Enviar Conteudo',
       }),
     },
   },
