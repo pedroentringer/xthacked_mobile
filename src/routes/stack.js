@@ -14,7 +14,7 @@ const stack = createStackNavigator(
     Viewer: {
       screen: Viewer,
       navigationOptions: ({navigation}) => ({
-        title: navigation.state.params.title,
+        title: navigation.state.params.post.title,
       }),
     },
   },

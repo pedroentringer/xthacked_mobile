@@ -4,6 +4,8 @@ const INITIAL_STATE = [
   {
     id: 1,
     title: 'Ligações Automáticas',
+    description:
+      'USAHu UASH uAHSUH uHAS Uha UHSU HASu ah suahs uahs auh ushau hsaush a',
     user: {
       name: 'Pedro Entringer',
     },
@@ -13,6 +15,8 @@ const INITIAL_STATE = [
   {
     id: 2,
     title: 'Ligações Automáticas',
+    description:
+      'USAHu UASH uAHSUH uHAS Uha UHSU HASu ah suahs uahs auh ushau hsaush a',
     user: {
       name: 'Pedro Entringer',
     },
@@ -22,6 +26,8 @@ const INITIAL_STATE = [
   {
     id: 3,
     title: 'Ligações Automáticas',
+    description:
+      'USAHu UASH uAHSUH uHAS Uha UHSU HASu ah suahs uahs auh ushau hsaush a',
     user: {
       name: 'Pedro Entringer',
     },

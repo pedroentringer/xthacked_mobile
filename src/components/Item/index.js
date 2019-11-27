@@ -16,7 +16,7 @@ import {
 
 export default function List({navigation, post}) {
   const handleVideo = () => {
-    navigation.navigate('Viewer', post);
+    navigation.navigate('Viewer', {post});
   };
   return (
     <Container>
