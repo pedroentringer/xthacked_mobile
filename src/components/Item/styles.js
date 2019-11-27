@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import {Dimensions, Platform, StyleSheet} from 'react-native';
 
 export const Container = styled.View`
   height: 300px;
