@@ -29,9 +29,10 @@ const Login = ({navigation}) => {
   const handleLogin = async () => {
     try {
       setLoading(true);
-      const {data} = await api.get(`/users?email=${email}`);
+      const {data} = await api.get(`/users/?email=${email}`);
+      const user = data[0];
       setLoading(false);
-      dispatch({type: UserTypes.ADD, data});
+      dispatch({type: UserTypes.ADD, user});
     } catch (err) {
       setLoading(false);
       Alert.alert(

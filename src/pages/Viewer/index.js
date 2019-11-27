@@ -30,21 +30,13 @@ import {
 } from './styles';
 
 const Viewer = ({navigation}) => {
-  const navigationPost = navigation.getParam('post');
-  navigationPost.likes = 10;
-  navigationPost.dislikes = 5;
-  navigationPost.comments = 10;
+  const post = navigation.getParam('post');
 
   const percent = {
-    likes:
-      (navigationPost.likes /
-        (navigationPost.likes + navigationPost.dislikes)) *
-      100,
-    dislikes:
-      (navigationPost.dislikes /
-        (navigationPost.likes + navigationPost.dislikes)) *
-      100,
+    likes: (post.likes / (post.likes + post.dislikes)) * 100,
+    dislikes: (post.dislikes / (post.likes + post.dislikes)) * 100,
   };
+
   return (
     <>
       <StatusBar
@@ -62,8 +54,8 @@ const Viewer = ({navigation}) => {
                   <Avatar />
                 </AvatarContent>
                 <Details>
-                  <Title>{navigationPost.title}</Title>
-                  <Text>{navigationPost.user.name}</Text>
+                  <Title>{post.title}</Title>
+                  <Text>{post.user.name}</Text>
                 </Details>
                 <Section>
                   <FontAwesome5
@@ -73,7 +65,7 @@ const Viewer = ({navigation}) => {
                     solid
                   />
                   <ButtonText style={{color: '#C8C8C8'}}>
-                    {navigationPost.comments}
+                    {post.comments.length}
                   </ButtonText>
                 </Section>
               </User>
@@ -87,7 +79,7 @@ const Viewer = ({navigation}) => {
                       solid
                     />
                     <ButtonText style={{color: '#24D540'}}>
-                      {navigationPost.likes}
+                      {post.likes}
                     </ButtonText>
                   </Button>
                   <Button>
@@ -98,7 +90,7 @@ const Viewer = ({navigation}) => {
                       solid
                     />
                     <ButtonText style={{color: '#D52424'}}>
-                      {navigationPost.dislikes}
+                      {post.dislikes}
                     </ButtonText>
                   </Button>
                 </Buttons>
@@ -123,60 +115,57 @@ const Viewer = ({navigation}) => {
               </Section>
               <Section>
                 <Title>Descrição</Title>
-                <Text>{navigationPost.description}</Text>
+                <Text>{post.description}</Text>
               </Section>
               <Section>
                 <Title>Tags</Title>
                 <Tags>
-                  <Tag>Node.js</Tag>
-                  <Tag>React Native</Tag>
-                  <Tag>React.js</Tag>
-                  <Tag>Adonis.js</Tag>
-                  <Tag>Express</Tag>
-                  <Tag>Socket.io</Tag>
+                  {post.tags.map((tag, index) => {
+                    return <Tag key={index}>{tag}</Tag>;
+                  })}
                 </Tags>
               </Section>
               <Section>
                 <Title>Comentários</Title>
-                <SectionComment>
-                  <User>
-                    <AvatarContent>
-                      <Avatar />
-                    </AvatarContent>
-                    <Details>
-                      <Title>{navigationPost.title}</Title>
-                      <Text>{navigationPost.user.name}</Text>
-                    </Details>
-                  </User>
-                  <Comment>
-                    Que video sensacional, me ajudou bastante no estágio.
-                  </Comment>
-                  <Buttons
-                    style={{justifyContent: 'flex-start', marginTop: 10}}>
-                    <Button>
-                      <FontAwesome5
-                        name={'thumbs-up'}
-                        size={20}
-                        color={'#24D540'}
-                        solid
-                      />
-                      <ButtonText style={{color: '#24D540'}}>
-                        {navigationPost.likes}
-                      </ButtonText>
-                    </Button>
-                    <Button>
-                      <FontAwesome5
-                        name={'thumbs-down'}
-                        size={20}
-                        color={'#D52424'}
-                        solid
-                      />
-                      <ButtonText style={{color: '#D52424'}}>
-                        {navigationPost.dislikes}
-                      </ButtonText>
-                    </Button>
-                  </Buttons>
-                </SectionComment>
+                {post.comments.map(comment => {
+                  return (
+                    <SectionComment key={comment.id}>
+                      <Title>{comment.user.name}</Title>
+                      <User>
+                        <AvatarContent>
+                          <Avatar />
+                        </AvatarContent>
+                        <Details />
+                      </User>
+                      <Comment>{comment.comment}</Comment>
+                      <Buttons
+                        style={{justifyContent: 'flex-start', marginTop: 10}}>
+                        <Button>
+                          <FontAwesome5
+                            name={'thumbs-up'}
+                            size={20}
+                            color={'#24D540'}
+                            solid
+                          />
+                          <ButtonText style={{color: '#24D540'}}>
+                            {comment.likes}
+                          </ButtonText>
+                        </Button>
+                        <Button>
+                          <FontAwesome5
+                            name={'thumbs-down'}
+                            size={20}
+                            color={'#D52424'}
+                            solid
+                          />
+                          <ButtonText style={{color: '#D52424'}}>
+                            {comment.dislikes}
+                          </ButtonText>
+                        </Button>
+                      </Buttons>
+                    </SectionComment>
+                  );
+                })}
               </Section>
               <Section>
                 <Title>Inserir um Comentário</Title>

@@ -1,0 +1,296 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "mmalafaia@gmail.com",
+      "name": "Manoel Malafaia",
+      "points_total": 0,
+      "teacher_id": 2,
+      "school_id": 1,
+      "file_id": 1,
+      "address": "Rua das Flores 72",
+      "city": "São Paulo",
+      "state": "SP",
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00"
+    },
+    {
+      "id": 2,
+      "email": "pedrodaher1997@gmail.com",
+      "name": "Pedro Entriger",
+      "points_total": 0,
+      "teacher_id": 1,
+      "school_id": 1,
+      "file_id": 1,
+      "address": "Rua das Flores 72",
+      "city": "São Paulo",
+      "state": "SP",
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00"
+    },
+    {
+      "id": 3,
+      "email": "philipe.tec@gmail.com",
+      "name": "Philipe Siqueira",
+      "points_total": 0,
+      "teacher_id": 5,
+      "school_id": 2,
+      "file_id": 1,
+      "address": "Rua Igarapé, 30",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00"
+    },
+    {
+      "id": 4,
+      "email": "didierpg@gmail.com",
+      "name": "Didier Ferreira",
+      "points_total": 0,
+      "teacher_id": 5,
+      "school_id": 2,
+      "file_id": 1,
+      "address": "Rua Pasto, 93",
+      "city": "João Pessoar",
+      "state": "PA",
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00"
+    },
+    {
+      "id": 5,
+      "email": "diego@rocketseat.com.br",
+      "name": "Diego Fernandes",
+      "points_total": 0,
+      "school_id": 2,
+      "file_id": 1,
+      "address": "Rua Principal",
+      "city": "Rio do Sul",
+      "state": "SC",
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "type": "course",
+      "title": "Como usa o Flex no CSS?",
+      "description": "Neste curso você aprenderá a utilizar os recursos do FlexBox",
+      "likes": 3,
+      "dislikes": 1,
+      "user": {
+        "name": "Manoel Malafaia"
+      },
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00",
+      "tags": ["ReactJS", "React Native"],
+      "comments": [
+        {
+          "id": 1,
+          "comment": "Tem muitas maneiras, já assistou o módulo bônus da Rockesetat?",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 1
+        },
+        {
+          "id": 2,
+          "comment": "Tem muitas maneiras, já assistou o módulo bônus da Rockesetat?",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "course",
+      "title": "Como usa o Flex no CSS?",
+      "description": "Neste curso você aprenderá a utilizar os recursos do FlexBox",
+      "likes": 3,
+      "dislikes": 1,
+      "user": {
+        "name": "Manoel Malafaia"
+      },
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00",
+      "tags": ["ReactJS", "React Native"],
+      "comments": [
+        {
+          "id": 1,
+          "comment": "Tem muitas maneiras, já assistou o módulo bônus da Rockesetat?",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 1
+        },
+        {
+          "id": 2,
+          "comment": "Tem muitas maneiras, já assistou o módulo bônus da Rockesetat?",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "course",
+      "title": "Como usa o Flex no CSS?",
+      "description": "Neste curso você aprenderá a utilizar os recursos do FlexBox",
+      "likes": 3,
+      "dislikes": 1,
+      "user": {
+        "name": "Manoel Malafaia"
+      },
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00",
+      "tags": ["ReactJS", "React Native"],
+      "comments": [
+        {
+          "id": 1,
+          "comment": "Tem muitas maneiras, já assistou o módulo bônus da Rockesetat?",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 1
+        },
+        {
+          "id": 2,
+          "comment": "Tem muitas maneiras, já assistou o módulo bônus da Rockesetat?",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 1
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "course",
+      "title": "Como usa o Flex no CSS?",
+      "description": "Neste curso você aprenderá a utilizar os recursos do FlexBox",
+      "likes": 3,
+      "dislikes": 1,
+      "user": {
+        "name": "Manoel Malafaia"
+      },
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00",
+      "tags": ["ReactJS", "React Native"],
+      "comments": [
+        {
+          "id": 1,
+          "comment": "Tem muitas maneiras, já assistou o módulo bônus da Rockesetat?",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 1
+        },
+        {
+          "id": 2,
+          "comment": "Tem muitas maneiras, já assistou o módulo bônus da Rockesetat?",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "course",
+      "title": "Como usa o Flex no CSS?",
+      "description": "Neste curso você aprenderá a utilizar os recursos do FlexBox",
+      "likes": 3,
+      "dislikes": 1,
+      "user": {
+        "name": "Manoel Malafaia"
+      },
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00",
+      "tags": ["ReactJS", "React Native"],
+      "comments": [
+        {
+          "id": 1,
+          "comment": "Tem muitas maneiras, já assistou o módulo bônus da Rockesetat?",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 1
+        },
+        {
+          "id": 2,
+          "comment": "Tem muitas maneiras, já assistou o módulo bônus da Rockesetat?",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "question",
+      "title": "Problema com Redux Saga",
+      "description": "Não estou conseguindo utilizar o Redux Saga, o problema é tal tal tal.",
+      "likes": 3,
+      "dislikes": 1,
+      "user": {
+        "name": "Manoel Malafaia"
+      },
+      "created_at": "2019-11-26T09:00:00",
+      "updated_at": "2019-11-26T09:00:00",
+      "tags": ["ReactJS", "React Native"],
+      "comments": [
+        {
+          "id": 1,
+          "comment": "Rapaz, o pessoal da RocketSeat resolve isso mole. Da uma olhada nesse video...",
+          "user": {
+            "name": "Pedro Entriger"
+          },
+          "likes": 3,
+          "dislikes": 0
+        }
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "user": {
+        "name": "Pedro Entriger"
+      },
+      "points": 20
+    },
+    {
+      "user": {
+        "name": "Philipe Siqueira"
+      },
+      "points": 19
+    },
+    {
+      "user": {
+        "name": "Didier Ferreira"
+      },
+      "points": 18
+    },
+    {
+      "user": {
+        "name": "Manoel Malafaia"
+      },
+      "points": 17
+    }
+  ]
+}

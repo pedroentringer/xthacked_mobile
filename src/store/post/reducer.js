@@ -1,40 +1,6 @@
 import {Types} from './actions';
 
-const INITIAL_STATE = [
-  {
-    id: 1,
-    title: 'Ligações Automáticas',
-    description:
-      'USAHu UASH uAHSUH uHAS Uha UHSU HASu ah suahs uahs auh ushau hsaush a',
-    user: {
-      name: 'Pedro Entringer',
-    },
-    likes: 10,
-    dislikes: 20,
-  },
-  {
-    id: 2,
-    title: 'Ligações Automáticas',
-    description:
-      'USAHu UASH uAHSUH uHAS Uha UHSU HASu ah suahs uahs auh ushau hsaush a',
-    user: {
-      name: 'Pedro Entringer',
-    },
-    likes: 10,
-    dislikes: 20,
-  },
-  {
-    id: 3,
-    title: 'Ligações Automáticas',
-    description:
-      'USAHu UASH uAHSUH uHAS Uha UHSU HASu ah suahs uahs auh ushau hsaush a',
-    user: {
-      name: 'Pedro Entringer',
-    },
-    likes: 10,
-    dislikes: 20,
-  },
-];
+const INITIAL_STATE = [];
 
 export default function post(state = INITIAL_STATE, action) {
   switch (action.type) {

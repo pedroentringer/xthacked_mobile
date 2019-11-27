@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useSelector, useDispatch} from 'react-redux';
+
 import {Types as PostTypes} from '../../store/post/actions';
+import api from '../../services/api';
 
 import {
   Container,
@@ -24,13 +26,15 @@ const Home = ({navigation}) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setLoading(true);
+    const search = async () => {
+      setLoading(true);
+      const {data} = await api.get(`/posts/?type=${category}`);
+      const posts = data;
+      dispatch({type: PostTypes.ADD_POSTS, posts});
+      setLoading(false);
+    };
 
-    //consulta api
-    //dispatch({type: PostTypes.CLEAR});
-    //coloca os posts no store
-
-    setLoading(false);
+    search();
   }, [category, dispatch]);
 
   const handleCategory = category => {
