@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Nov 26 17:34:05 BRST 2019
+#Tue Nov 26 23:02:29 BRST 2019
 60.set=ASSET
 52.set=NATIVE_RESOURCE
 53.base=D\:\\RSXP Rocketseat\\hack\\xthacked_mobile\\android\\app\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0

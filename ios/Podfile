@@ -38,6 +38,8 @@ target 'xthacked' do
 
   pod 'lottie-ios', :path => '../node_modules/lottie-ios'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'xthackedTests' do
     inherit! :search_paths
     # Pods for testing

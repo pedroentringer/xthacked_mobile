@@ -1,5 +1,4 @@
 import React from 'react';
-import {View} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {
   Container,
@@ -10,6 +9,9 @@ import {
   Details,
   Title,
   User,
+  Buttons,
+  Button,
+  ButtonText,
 } from './styles';
 
 export default function List({post}) {
@@ -26,9 +28,26 @@ export default function List({post}) {
         </Details>
       </Main>
       <Main>
-        <Details>
-          <FontAwesome5 name={'thumbs-up'} size={20} color={'#24D540'} solid />
-        </Details>
+        <Buttons>
+          <Button>
+            <FontAwesome5
+              name={'thumbs-up'}
+              size={20}
+              color={'#24D540'}
+              solid
+            />
+            <ButtonText style={{color: '#24D540'}}>3.230</ButtonText>
+          </Button>
+          <Button>
+            <FontAwesome5
+              name={'thumbs-down'}
+              size={20}
+              color={'#D52424'}
+              solid
+            />
+            <ButtonText style={{color: '#D52424'}}>3.230</ButtonText>
+          </Button>
+        </Buttons>
       </Main>
     </Container>
   );

@@ -12,7 +12,7 @@ export const Content = styled(LinearGradient)`
   flex: 1;
   align-self: stretch;
   align-items: center;
-  padding: 30px;
+  padding: 30px 30px 0px 30px;
   justify-content: space-between;
 `;
 
@@ -22,5 +22,7 @@ export const Logo = styled.Image`
 `;
 
 export const VideoList = styled(FlatList)`
-  width: 100%;
+  align-self: stretch;
+  flex: 1;
+  margin-top: 40px;
 `;
