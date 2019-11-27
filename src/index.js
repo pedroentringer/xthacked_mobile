@@ -11,8 +11,8 @@ export default function Index() {
   return (
     <Fragment>
       <StatusBar
-        backgroundColor="#fff"
-        translucent={false}
+        backgroundColor="transparent"
+        translucent
         barStyle="dark-content"
       />
       <Provider store={store}>

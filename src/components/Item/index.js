@@ -1,13 +1,10 @@
-import React, {useState} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {View} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {Container, BoxVideo, Legenda} from './styles';
 
-import {NavigationContext} from 'react-navigation';
-
 export default function List(props) {
   const {item} = props;
-  console.log(item);
   return (
     <Container>
       <BoxVideo>

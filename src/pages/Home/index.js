@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, Content, Logo, VideoList} from './styles';
 
 import Item from '../../components/Item';
-import logomarca from '../../assets/logomarca.png';
+import logomarca from '../../assets/logomarca-branca-mini.png';
 
 const Home = ({navigation}) => {
   return (

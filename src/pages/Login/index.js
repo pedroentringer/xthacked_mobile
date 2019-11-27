@@ -46,11 +46,6 @@ const Login = ({navigation}) => {
   return (
     <>
       {loading && <Loading />}
-      <StatusBar
-        backgroundColor="transparent"
-        translucent
-        barStyle="dark-content"
-      />
       <Content colors={['#24a8df', '#02528e']}>
         <Container>
           <LogoContent>
