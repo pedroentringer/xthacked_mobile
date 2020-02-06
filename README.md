@@ -1,4 +1,6 @@
 ﻿# xthacked_mobile
+RocketSeat Experience Hackathon Challenge
+ 
 Our challenge was to promote technology learning among young people in high school.
 By doing a case study, we were able to identify a high interest among young people on social media platforms, namely Snapchat and Instagram.
 
